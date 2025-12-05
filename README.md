@@ -1,7 +1,13 @@
 ## README.md file for project PythonTestModule
 
 
-This project uses C++ to implement a Python module. 
+At the core of this project is a C++ file named PythonTestModule.cpp. As you can probably guess
+from this file's name, it implements a Python module.
+
+This file implements a single C++ class which is named CraigClass, and this class in turn implements
+three methods. After the class had been defined, the file then makes use of some macros from the
+Boost Python C++ library in order to create the Python bindings for this class and its methods. 
+
 
 ```c++
 #include <iostream>
