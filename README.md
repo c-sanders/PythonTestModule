@@ -4,13 +4,69 @@
 This project uses C++ to implement a Python module. 
 
 ```c++
-int
-main
-(
- void
-)
+#include <iostream>
+
+#include <boost/python.hpp>
+
+
+class
+CraigClass
 {
-    cout << "Hello, World!" << endl;
+public :
+
+    CraigClass
+    (
+     int   value
+    )
+    :
+    value
+    (
+     value
+    )
+    {
+        std::cout << "CraigClass::Ctor : Enter" << std::endl;
+        std::cout << "CraigClass::Ctor : Exit"  << std::endl;
+    }
+
+
+    void
+    testFunction
+    (
+    )
+    {
+        std::cout << "CraigClass::testFunction : Enter" << std::endl;
+        std::cout << "CraigClass::testFunction : Exit"  << std::endl;
+    }
+
+
+    int
+    getValue
+    (
+    )
+    const
+    {
+        return this->value;
+    }
+
+    private :
+
+        int   value;
+};
+
+
+BOOST_PYTHON_MODULE(PythonTestModule)
+{
+    using namespace boost::python;
+
+    boost::python::def
+    (
+     "craig_add",
+     craig_add
+    ); // "craig_add" is the Python name, 'craig_add' is the C++ function
+
+    class_<CraigClass>("CraigClass", init<int>()) // Expose MyClass with an int constructor
+            .def("getValue",     &CraigClass::getValue)
+            .def("testFunction", &CraigClass::testFunction);
 }
 ```
 
