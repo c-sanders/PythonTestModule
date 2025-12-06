@@ -118,4 +118,5 @@ BOOST_PYTHON_MODULE(PythonTestModule)
 ### Building the Python module.
 
 This project is packaged as a GNU Autotools package. As a result, it should contain one file
-named configure.ac and one or more files named Makefile.am. 
+named `configure.ac` which resides in the top-level directory of the package and one or more files
+named `Makefile.am`.   
