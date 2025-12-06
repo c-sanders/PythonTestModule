@@ -2,10 +2,10 @@
 
 ### What this project does.
 
-The core of this project is a C++ file which is named PythonTestModule.cpp. As you can probably
-guess from this file's name, it contains C++ code which implements a Python module. The module which
-is implemented by this code, is rather simple in nature. This is a deliberate design choice and it was
-done in order to try and keep the focus on how to create a Python module in C++.
+This project implements a Python module. It does this by way of a C++ file named PythonTestModule.cpp.  
+This file forms the core of this project, and the Python module which it implements, is rather simple
+in nature. This is a deliberate design choice which was made in order to try and keep the focus on
+how to create a Python module in C++.
 
 ### How it does it.
 
