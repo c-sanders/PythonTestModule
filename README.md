@@ -3,16 +3,18 @@
 ### What this project does.
 
 This project implements a Python module. It does this by way of a C++ file named PythonTestModule.cpp.  
-This file forms the core of this project, and the Python module which it implements, is rather simple
-in nature. This is a deliberate design choice which was made in order to try and keep the focus on
+This file forms the core of this project, and the Python module which it implements is rather simple
+in nature. Keeping the design simple was a deliberate choice which hopefully makes it easier to 
+understand what is being done in the C++ code. This way, 
+was made in order to try and keep the focus on
 how to create a Python module in C++.
 
 ### How it does it.
 
-This file implements a single C++ class which is named TestClass. In turn, this class implements
-three methods - one of which is a constructor. After the class has finished being defined, the file
-then uses the BOOST_PYTHON_MODULE macro from the Boost Python C++ library in order to create some
-Python bindings for this class and its three methods. 
+The PythonTestClass.cpp file implements a single C++ class which is named TestClass. In turn, this
+class implements three methods - one of which is a constructor. After the class has finished being
+defined, the file then uses the BOOST_PYTHON_MODULE macro from the Boost Python C++ library in order
+to create some Python bindings for this class and its three methods. 
 
 ```c++
 #include <iostream>
@@ -113,3 +115,7 @@ BOOST_PYTHON_MODULE(PythonTestModule)
 }
 ```
 
+### Building the Python module.
+
+This project is packaged as a GNU Autotools package. As a result, it should contain one file
+named configure.ac and one or more files named Makefile.am. 
