@@ -11,8 +11,8 @@ done in order to try and keep the focus on how to create a Python module in C++.
 
 This file implements a single C++ class which is named CraigClass. In turn, this class implements
 three methods - one of which is a constructor. After the class has finished being defined, the file
-then uses the BOOST_PYTHON_MODULE macro from the Boost Python C++ library to create some Python
-bindings for this class and its three methods. 
+then uses the BOOST_PYTHON_MODULE macro from the Boost Python C++ library in order to create some
+Python bindings for this class and its three methods. 
 
 ```c++
 #include <iostream>
@@ -81,49 +81,3 @@ BOOST_PYTHON_MODULE(PythonTestModule)
 }
 ```
 
-[GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart)
-
-#### - Initialise a directory to hold a local copy of a repository
-```
-  > git init
-```
-
-* #### Cloning a remote repository into a local directory
-
-Example using git;
-```
-  > git clone https://github.com/c-sanders/Gtk4-Example-1.git
-```
-
-Example using gh;
-```
-  > gh repo clone c-sanders/ImaginaryNumbers
-```
-
-* #### Check the status of a local repository
-```
-  > git status
-```
-
-* #### Add a local file to a local repository
-```
-  > git add Filename.cpp
-```
-
-* #### Remove a file from a repository
-```
-  > git rm Filename.cpp
-```
-
-* #### Commit changes, i.e. additions and removals of files, to the local repository
-```
-  > git commit -m "Commit comment."
-```
-
-* #### Pushing locally committed changes to a remote repositoy
-```
-  > git push
-```
-or
-```
-  > git push origin master
