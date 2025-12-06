@@ -4,8 +4,8 @@
 
 The core of this project is a C++ file which is named PythonTestModule.cpp. As you can probably
 guess from this file's name, it contains C++ code which implements a Python module. The module which
-is implemented by this code, is a rather simple in nature. This is a deliberate design choice. It was
-done in order to try and keep the focus on how to write and create bindings for a Python module in C++.
+is implemented by this code, is rather simple in nature. This is a deliberate design choice and it was
+done in order to try and keep the focus on how to create a Python module in C++.
 
 ### How it does it.
 
